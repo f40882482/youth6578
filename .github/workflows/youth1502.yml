@@ -31,7 +31,6 @@ jobs:
         run: |
           npm install
       - name: '运行 【中青阅读】'
-        if: env.TXNEWS_COOKIE
         run: |
           node youth1502.js
         env:
