@@ -4,7 +4,7 @@
 #   branches: 
 #   - master 
 
-name: txnews
+name: 中青自动阅读
 
 on:
   workflow_dispatch:
@@ -30,10 +30,10 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【腾讯新闻】'
+      - name: '运行 【中青阅读】'
         if: env.TXNEWS_COOKIE
         run: |
-          node Task/txnews.js
+          node youth1502.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
